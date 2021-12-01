@@ -5,6 +5,9 @@ function App() {
   return (
     <div className="App">
       <Button>Styled button</Button>
+      <br/>
+      <br/>
+      <Button variant='outline'>Styled button</Button>
     </div>
   );
 }
