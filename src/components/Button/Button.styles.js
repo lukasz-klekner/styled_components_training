@@ -10,3 +10,8 @@ export const StyledButton = styled.button`
   display: inline-block;
   font-size: 16px;
 `
+
+export const FancyButton = styled(StyledButton)`
+    background-image: linear-gradient(to right, #f6d365 0%, #fda085 100%);
+    border: none
+`
