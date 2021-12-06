@@ -1,10 +1,15 @@
 import './App.css';
-import { FancyButton, SubmitButton } from './components/Button/Button.styles';
+import { AnimatedLogo, FancyButton, SubmitButton } from './components/Button/Button.styles';
 import Button  from './components/Button/Button';
+import logo from './logo.svg'
+
 
 function App() {
   return (
     <div className="App">
+      <AnimatedLogo src={logo} />
+      <br />
+      <br />
       <Button>Styled button</Button>
       <br/>
       <br/>
