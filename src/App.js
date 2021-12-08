@@ -1,9 +1,15 @@
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 import './App.css';
 import { AnimatedLogo, DarkButton, FancyButton, SubmitButton } from './components/Button/Button.styles';
 import Button  from './components/Button/Button';
 import logo from './logo.svg'
+
+const GlobalStyle = createGlobalStyle`
+  button {
+    font-family: ${({theme}) => theme.fontFamily};
+  }
+`
 
 const theme = {
   dark: {
@@ -13,12 +19,14 @@ const theme = {
   light: {
     primary: '#fff',
     text: '#000'
-  }
+  },
+  fontFamily: 'Roboto'
 }
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <div className="App">
         <AnimatedLogo src={logo} />
         <br />
